@@ -41,8 +41,6 @@ int counting = 0;
 void sendSerialCommand()
 {
   arduinoController.write( carRCControl );
-  
-  println( carRCControl );
 
 // TEST SCRIPT
 //  arduinoController.write( 1 );
