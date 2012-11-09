@@ -42,30 +42,11 @@ void initialiseClient() {
   myBroadcastLocation = new NetAddress( serverIP, 32000 );
 }
 
-// mode 0 === mouse position
-final int MOUSE_POS = 0;
-// mode 1 === full grid
-final int FULL_GRID = 1;
-// mode 2 === number instruction
-final int NUMBER_INTRUC = 2;
-
-void sendGridMessage( int[] gridArray )
+void sendRCMessage( int message )
 {
-  OscMessage myOscMessage = new OscMessage("grid");
-  myOscMessage.add(FULL_GRID);
-
-  for ( int i = 0; i < gridArray.length; i++ )
-  {
-    myOscMessage.add( gridArray[i] );
-  }
-  oscP5.send(myOscMessage, myBroadcastLocation);
-}
-
-void sendPositionMessage( int[] messageArray )
-{
-  OscMessage myOscMessage = new OscMessage("mouse");
-  myOscMessage.add(MOUSE_POS);
-  myOscMessage.add(messageArray[0]);
-  myOscMessage.add(messageArray[1]);
-  oscP5.send(myOscMessage, myBroadcastLocation);
+  OscMessage myOscMessage = new OscMessage( "grid" );
+  myOscMessage.add( message );
+  oscP5.send( myOscMessage, myBroadcastLocation );
+  
+//  println( "ANDROID SENDING :: " + message );
 }

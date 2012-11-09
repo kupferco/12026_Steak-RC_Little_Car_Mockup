@@ -45,7 +45,7 @@ int FPSColour = 255;
 
 
 // INTERFACE
-Boolean showFPS = true;
+Boolean showFPS = false;
 Boolean showFinger = false;
 
 

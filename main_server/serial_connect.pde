@@ -1,7 +1,7 @@
 /*
 
-title:      12021 Jam - Samsung Drawing Water 1.0
-author:     DNKUPFER 2012-10-10
+title:      12026 Steak - RC Little Car Mockup
+author:     DNKUPFER 2012-11-09
 
 email:      daniel@steakstudio.com
 site:       http://www.steakstudio.com
@@ -40,23 +40,12 @@ int state = 0;
 int counting = 0;
 void sendSerialCommand()
 {
-  int[] compiledGrid = compileGrid();
-  
-  for ( int i=0; i < compiledGrid.length; i++ )
-  {
-    arduinoController.write( compiledGrid[i] );
-  }
+  arduinoController.write( carRCControl );
   
 //  println( compiledGrid +" /// " + arduinoController );
-
-
 
 // TEST SCRIPT
 //  arduinoController.write( 1 );
   
 }
 
-void mousePressed()
-{
-  sendSerialCommand();
-}

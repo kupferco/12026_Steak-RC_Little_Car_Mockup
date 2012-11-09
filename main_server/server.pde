@@ -1,7 +1,7 @@
 /*
 
-title:      12021 Jam - Samsung Drawing Water 1.0
-author:     DNKUPFER 2012-10-10
+title:      12026 Steak - RC Little Car Mockup
+author:     DNKUPFER 2012-11-09
 
 email:      daniel@steakstudio.com
 site:       http://www.steakstudio.com
@@ -58,30 +58,9 @@ void oscEvent(OscMessage theOscMessage) {
     oscP5.send(theOscMessage, myNetAddressList);
   }
   
-// mode 0 === mouse position
-// mode 1 === full grid
-// mode 2 === number instruction
-
-  mode = theOscMessage.get(0).intValue();
-  switch( mode )
-  {
-    case 0 :
-      setFingerPosition(  theOscMessage.get(1).intValue(),
-                          theOscMessage.get(2).intValue(),
-                          theOscMessage.get(3).intValue() );
-      break;
-    case 1 :
-      // 1 CLAIMS PC LOCAL MOUSE CONTROL
-      if ( animation != 1 )
-      {
-        offDelay = 10;
-        setGridFromAndroid( theOscMessage );
-      }
-      break;
-    case 2 :
-      println( theOscMessage.get(1).intValue() );
-      break;
-  }
+  println( "PROCESSING RECEIVED :: " + theOscMessage.get(0).intValue() );
+  carRCControl = int( theOscMessage.get(0).intValue() );
+  forceActivateButton( theOscMessage.get(0).intValue() );
 }
 
 

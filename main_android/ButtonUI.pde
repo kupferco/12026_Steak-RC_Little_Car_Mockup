@@ -11,22 +11,22 @@ Copyright:  Steak Studio Ltd 2012
 */
 
 ArrayList buttons = new ArrayList();
-int[] buttonColours = { color( 255, 0, 0 ),
-                        color( 0, 255, 0 ),
-                        color( 0, 0, 255 ),
-                        color( 255, 255, 0 ),
+int[] buttonColours = { color( 50 ),
+                        color( 50 ),
+                        color( 50 ),
+                        color( 50 ),
                         color( 0 ),
-                        color( 0, 255, 255 ),
-                        color( 100, 0, 0 ),
-                        color( 0, 100, 0 ),
-                        color( 0, 0, 100 ) };
+                        color( 50 ),
+                        color( 50 ),
+                        color( 50 ),
+                        color( 50 ) };
 
 int[] buttonBytes = { 55,
                       33,
                       44,
                       22,
                       0,
-                      55,
+                      41,
                       66,
                       77,
                       88 };
@@ -107,6 +107,6 @@ void drawButtons()
     byteInstruction = ( button.checkFingerCollision() ) ? button.getByte() : byteInstruction;
   }
   
-  println( byteInstruction );
+  sendRCMessage( byteInstruction );
 }
 

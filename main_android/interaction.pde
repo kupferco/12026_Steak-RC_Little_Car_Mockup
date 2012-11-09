@@ -25,15 +25,10 @@ void interaction()
 }
 
 
-//void mousePressed()
-//{
-//  touching = true;
-//}
-//
-//void mouseReleased()
-//{
-//  touching = false;
-//}
+void mousePressed()
+{
+//  sendRCMessage( 55 );
+}
 
 
 boolean surfaceTouchEvent(MotionEvent event) {
