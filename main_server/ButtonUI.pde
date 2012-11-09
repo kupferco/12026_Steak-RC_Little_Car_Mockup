@@ -21,15 +21,15 @@ int[] buttonColours = { color( 50 ),
                         color( 50 ),
                         color( 50 ) };
 
-int[] buttonBytes = { 55,
-                      33,
-                      44,
-                      22,
+int[] buttonBytes = { 1,
+                      3,
+                      2,
+                      6,
                       0,
-                      41,
-                      66,
-                      77,
-                      88 };
+                      9,
+                      4,
+                      12,
+                      8 };
 
 class ButtonUI
 { 
@@ -95,8 +95,8 @@ void initialiseButtonInterface()
   {
     for ( int c = 0; c < grid[1]; c++ )
     {
-      int x = buttonWidth * r;
-      int y = buttonHeight * c;
+      int x = buttonWidth * c;
+      int y = buttonHeight * r;
       buttons.add( new ButtonUI( ++count, x, y, buttonColours[count], buttonBytes[count], buttonSize ) );
     }
   }
