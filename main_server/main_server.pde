@@ -79,6 +79,7 @@ void draw()
   drawButtons();
   interaction();
 
+  drawSerial();
   
   if ( showFPS )
   {

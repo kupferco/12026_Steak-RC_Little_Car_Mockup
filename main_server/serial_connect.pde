@@ -42,7 +42,7 @@ void sendSerialCommand()
 {
   arduinoController.write( carRCControl );
   
-//  println( compiledGrid +" /// " + arduinoController );
+  println( carRCControl );
 
 // TEST SCRIPT
 //  arduinoController.write( 1 );

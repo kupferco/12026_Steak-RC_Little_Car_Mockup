@@ -13,7 +13,7 @@
 */
 // ==================================================
 
-#define SERIAL_CHANNELS 51
+#define SERIAL_CHANNELS 1
 
 #define GET_LINE 0
 #define LOCAL_TEST 1
@@ -21,7 +21,7 @@
 int state = GET_LINE;
 
 int bank[SERIAL_CHANNELS] = { 
-  0, 0, 0, 0, 0, 0 };
+  0 };
 
 void setup() {
   pinMode(13, OUTPUT);
